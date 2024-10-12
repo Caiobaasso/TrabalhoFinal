@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="estilo.css">
+        <link rel="stylesheet" href="css/estilo.css">
         <title>Login</title>
     </head>
 
@@ -11,17 +11,18 @@
         <div class="login-container">
             <h2>Login do Sistema</h2>
             <form action="/login" method="post">
-                <!-- Campo para inserir o nome de usuário -->
                 <label for="usuario">Usuário:</label>
-                <input type="text" id="usuario" name="usuario" required>
+                <input type="text" id="usuario" name="usuario" placeholder ="Insira o usuário" required>
     
-                <!-- Campo para inserir a senha do usuário -->
                 <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required>
-    
-                <!-- Botão para enviar o formulário de login -->
+                <input type="password" id="senha" name="senha" placeholder="**********" required>
+                
+                <div id="mensagemErro" style="display: none; color: red;">Usuário ou senha inválidos. Tente novamente.</div>
+                
                 <button type="submit">Entrar</button>
             </form>
         </div>
+
+    <script src="js/script.js"></script> 
     </body>
 </html>
