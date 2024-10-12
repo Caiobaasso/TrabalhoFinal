@@ -2,9 +2,26 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+        <title>Login</title>
     </head>
 
     <body>
-        <h1>TESTE</h1>
+        <div class="login-container">
+            <h2>Login do Sistema</h2>
+            <form action="/login" method="post">
+                <!-- Campo para inserir o nome de usuário -->
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" name="usuario" required>
+    
+                <!-- Campo para inserir a senha do usuário -->
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+    
+                <!-- Botão para enviar o formulário de login -->
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
     </body>
 </html>
