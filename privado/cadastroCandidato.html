@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Candidatos</title>
+    <link rel="stylesheet" href="css/estiloCadastros.css">
+    <script src="scripts.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', carregarPartidos);
+    </script>
+</head>
+<body>
+    <div class="cadastro-container">
+        <h2>Cadastro de Candidatos</h2>
+        <form action="/cadastrar-candidato" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="partido-select">Partido:</label>
+            <select id="partido-select" name="partido" required>
+                <option value="">Selecione um partido</option>
+                <!-- Partidos serão carregados aqui -->
+            </select>
+
+            <label for="numero">Número do Candidato:</label>
+            <input type="number" id="numero" name="numero" required>
+
+            <button type="submit">Cadastrar Candidato</button>
+        </form>
+
+        <h3>Candidatos Cadastrados</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Partido</th>
+                    <th>Número do Candidato</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="listaCandidatos">
+                <!-- Os registros dos candidatos serão inseridos aqui dinamicamente -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
